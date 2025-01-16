@@ -1,0 +1,32 @@
+/** Variables, Initializations and Resetting Styles **/
+
+// Variables: Page Colors
+$primary-color: #FFEFE7;
+$secundary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$quaternary-color: #E86424;
+
+// Variables: Text Colors
+$primary-text-color: #7C6A0A;
+$secundary-text-color: #EA9500;
+
+// Variables: Fonts
+$font-stack: "IBM Plex Sans", serif;
+
+// Resetting Styles
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font-stack;
+}
+
+/** Page Styles **/
+
+body {
+	background-color: $secundary-color;
+}

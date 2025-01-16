@@ -1,0 +1,16 @@
+/** Variables, Initializations and Resetting Styles **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "IBM Plex Sans", serif;
+}
+
+/** Page Styles **/
+body {
+  background-color: #FFDAC6;
+}/*# sourceMappingURL=main.css.map */

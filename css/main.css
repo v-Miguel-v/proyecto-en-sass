@@ -17,9 +17,29 @@ body {
 /** Page Styles **/
 nav {
   width: 100%;
-  height: 100px;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: space-between;
 }
-
+nav h1.text-logo {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #7C6A0A;
+}
+nav div.buttons {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+nav div.buttons button {
+  background: none;
+  border-style: none;
+}
+nav div.buttons button svg {
+  width: 36px;
+  stroke: #7C6A0A;
+}
 main {
   width: 100%;
   height: 800px;

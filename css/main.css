@@ -11,6 +11,8 @@ html {
 }
 
 body {
+  padding: 0 30px;
+  color: #7C6A0A;
   background-color: #FFEFE7;
 }
 
@@ -18,14 +20,14 @@ body {
 nav {
   width: 100%;
   display: flex;
-  padding: 5px 10px;
+  padding-top: 15px;
   align-items: center;
   justify-content: space-between;
 }
 nav h1.text-logo {
   font-size: 3.6rem;
   font-weight: 500;
-  color: #7C6A0A;
+  cursor: pointer;
 }
 nav div.buttons {
   display: flex;
@@ -39,10 +41,48 @@ nav div.buttons button {
 nav div.buttons button svg {
   width: 36px;
   stroke: #7C6A0A;
+  cursor: pointer;
 }
+
 main {
   width: 100%;
   height: 800px;
+}
+main article {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+}
+main article div {
+  width: 50%;
+}
+main div.main-info h2 {
+  margin: 30px 0;
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+main div.main-info p {
+  font-size: 1.9rem;
+}
+main div.main-info button {
+  font-size: 1.6rem;
+  color: white;
+  width: 170px;
+  padding: 20px;
+  margin-top: 50px;
+  border-style: none;
+  border-radius: 30px;
+  background-color: #FA9500;
+  cursor: pointer;
+}
+main div.main-img {
+  display: flex;
+  justify-content: right;
+}
+main div.main-img img {
+  width: 35vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 footer {

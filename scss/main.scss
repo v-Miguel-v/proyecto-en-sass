@@ -7,7 +7,7 @@ $tertiary-color: #BABD8D;
 $quaternary-color: #E86424;
 
 // Variables: Text Colors
-$main-text-color: #7C6A0A;
+$text-main-color: #7C6A0A;
 $contrast-color: #FA9500;
 
 // Variables: Fonts
@@ -27,7 +27,7 @@ html {
 
 body {
 	padding: 0 30px;
-	color: $main-text-color;
+	color: $text-main-color;
 	background-color: $primary-color;
 }
 
@@ -57,7 +57,7 @@ nav {
 
 		button svg {
 			width: 36px;
-			stroke: $main-text-color;
+			stroke: $text-main-color;
 			cursor: pointer;
 		}
 	}
@@ -65,7 +65,6 @@ nav {
 
 main {
 	width: 100%;
-	height: 800px;
 
 	article {
 		width: 100%;
@@ -112,6 +111,127 @@ main {
 			object-fit: contain;
 		}
 	}
+}
+
+.all-products-section {
+	width: 100%;
+	height: auto;
+	display: flex;
+	row-gap: 45px;
+	flex-direction: column;
+	margin-top: 100px;
+
+	h2 {
+		font-size: 2.8rem;
+		font-weight: 400;
+		margin-bottom: 25px;
+	}
+
+	.products {
+		display: grid;
+		grid-template: auto / repeat(3, 1fr);
+		gap: 50px;
+	}
+
+	.product-card {
+		width: 200px;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		padding: 10px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+
+		div {
+			width: 100%;
+			padding: 0px 15px;
+		}
+
+		button {
+			height: 6%;
+			background: none;
+			border-style: none;
+			align-self: flex-end;
+
+			svg {
+				height: 100%;
+			}
+		}
+
+		div.product-info {
+			margin-top: 13px;
+
+			h3 {
+				font-size: 1.6rem;
+				font-weight: 600;
+			}
+
+			p {
+				margin-top: 2px;
+				font-size: 1.0rem;
+			}
+		}
+
+		div.product-img {
+			height: 66%;
+			margin-top: 7px;
+			overflow: hidden;
+			align-self: center;
+			border-radius: 10px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		// Alinear los elementos de la primera columna a la izquierda
+		&:nth-child(3n + 1) {
+			justify-self: start;
+		}
+
+		// Alinear los elementos de la segunda columna al centro
+		&:nth-child(3n + 2) {
+			justify-self: center;
+		}
+
+		// Alinear los elementos de la tercera columna a la derecha
+		&:nth-child(3n) {
+			justify-self: end;
+		}
+	}
+
+	.healthcare-catalog .product-card {
+		background-color: $secundary-color;
+
+		svg {
+			stroke: $text-main-color;
+		}
+
+		// Correción de Posicionado de Imánges de los Producots 1, 2 y 3.
+		&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+			img {
+				object-position: 0px -15px;
+			}
+		}
+	}
+
+	.furniture-catalog .product-card {
+		color: white;
+		background-color: $tertiary-color;
+
+		svg {
+			stroke: white;
+		}
+
+		// Correción de Posicionado de Imánges de los Producots 3, 4, 8 y 9.
+		&:nth-child(3), &:nth-child(4), &:nth-child(8), &:nth-child(9) {
+			img {
+				object-position: 0px -30px;
+			}
+		}
+	}
+
 }
 
 footer {

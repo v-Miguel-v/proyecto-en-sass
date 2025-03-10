@@ -13,6 +13,16 @@ $contrast-color: #FA9500;
 // Variables: Fonts
 $font-stack: "IBM Plex Sans", serif;
 
+// Mixins
+@mixin card-colors($text, $background) {
+	color: $text;
+	background-color: $background;
+
+	svg {
+		stroke: $text;
+	}
+}
+
 // Resetting Styles
 * {
 	margin: 0;
@@ -29,6 +39,11 @@ body {
 	padding: 0 30px;
 	color: $text-main-color;
 	background-color: $primary-color;
+}
+
+button {
+	background: none;
+	border-style: none;
 }
 
 /** Page Styles **/
@@ -49,11 +64,6 @@ nav {
 	div.buttons {
 		display: flex;
 		column-gap: 15px;
-
-		button {
-			background: none;
-			border-style: none;
-		}
 
 		button svg {
 			width: 36px;
@@ -94,7 +104,6 @@ main {
 			width: 170px;
 			padding: 20px;
 			margin-top: 50px;
-			border-style: none;
 			border-radius: 30px;
 			background-color: $contrast-color;
 			cursor: pointer;
@@ -150,8 +159,6 @@ main {
 
 		button {
 			height: 6%;
-			background: none;
-			border-style: none;
 			align-self: flex-end;
 
 			svg {
@@ -202,11 +209,7 @@ main {
 	}
 
 	.healthcare-catalog .product-card {
-		background-color: $secundary-color;
-
-		svg {
-			stroke: $text-main-color;
-		}
+		@include card-colors($text-main-color, $secundary-color);
 
 		// Correción de Posicionado de Imánges de los Producots 1, 2 y 3.
 		&:nth-child(1), &:nth-child(2), &:nth-child(3) {
@@ -217,12 +220,7 @@ main {
 	}
 
 	.furniture-catalog .product-card {
-		color: white;
-		background-color: $tertiary-color;
-
-		svg {
-			stroke: white;
-		}
+		@include card-colors(white, $tertiary-color);
 
 		// Correción de Posicionado de Imánges de los Producots 3, 4, 8 y 9.
 		&:nth-child(3), &:nth-child(4), &:nth-child(8), &:nth-child(9) {

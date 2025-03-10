@@ -16,6 +16,11 @@ body {
   background-color: #FFEFE7;
 }
 
+button {
+  background: none;
+  border-style: none;
+}
+
 /** Page Styles **/
 nav {
   width: 100%;
@@ -33,10 +38,6 @@ nav div.buttons {
   display: flex;
   -moz-column-gap: 15px;
        column-gap: 15px;
-}
-nav div.buttons button {
-  background: none;
-  border-style: none;
 }
 nav div.buttons button svg {
   width: 36px;
@@ -69,7 +70,6 @@ main div.main-info button {
   width: 170px;
   padding: 20px;
   margin-top: 50px;
-  border-style: none;
   border-radius: 30px;
   background-color: #FA9500;
   cursor: pointer;
@@ -118,8 +118,6 @@ main div.main-img img {
 }
 .all-products-section .product-card button {
   height: 6%;
-  background: none;
-  border-style: none;
   align-self: flex-end;
 }
 .all-products-section .product-card button svg {
@@ -156,6 +154,7 @@ main div.main-img img {
   justify-self: end;
 }
 .all-products-section .healthcare-catalog .product-card {
+  color: #7C6A0A;
   background-color: #FFDAC6;
 }
 .all-products-section .healthcare-catalog .product-card svg {

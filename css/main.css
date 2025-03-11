@@ -1,4 +1,4 @@
-/** Variables, Initializations and Resetting Styles **/
+/** Mixins, Variables, Initializations and Resetting Styles **/
 * {
   margin: 0;
   padding: 0;
@@ -98,8 +98,9 @@ main div.main-img img {
   margin-bottom: 25px;
 }
 .all-products-section .products {
-  display: grid;
-  grid-template: auto/repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 50px;
 }
 .all-products-section .product-card {
@@ -119,6 +120,7 @@ main div.main-img img {
 .all-products-section .product-card button {
   height: 6%;
   align-self: flex-end;
+  cursor: pointer;
 }
 .all-products-section .product-card button svg {
   height: 100%;
@@ -144,15 +146,6 @@ main div.main-img img {
 .all-products-section .product-card div.product-img img {
   width: 100%;
 }
-.all-products-section .product-card:nth-child(3n+1) {
-  justify-self: start;
-}
-.all-products-section .product-card:nth-child(3n+2) {
-  justify-self: center;
-}
-.all-products-section .product-card:nth-child(3n) {
-  justify-self: end;
-}
 .all-products-section .healthcare-catalog .product-card {
   color: #7C6A0A;
   background-color: #FFDAC6;
@@ -174,6 +167,33 @@ main div.main-img img {
 .all-products-section .furniture-catalog .product-card:nth-child(3) img, .all-products-section .furniture-catalog .product-card:nth-child(4) img, .all-products-section .furniture-catalog .product-card:nth-child(8) img, .all-products-section .furniture-catalog .product-card:nth-child(9) img {
   -o-object-position: 0px -30px;
      object-position: 0px -30px;
+}
+
+.info-section h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.info-section .all-info-subsections {
+  margin-top: 60px;
+}
+.info-section .why-us-section .info-cards-container {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+.info-section .why-us-section .info-cards-container :nth-child(1) img {
+  margin-right: 30px;
+}
+.info-section .why-us-section .info-card {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #E86424;
+}
+.info-section .why-us-section .info-card img {
+  height: 100px;
 }
 
 footer {

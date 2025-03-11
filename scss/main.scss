@@ -1,14 +1,14 @@
-/** Variables, Initializations and Resetting Styles **/
+/** Mixins, Variables, Initializations and Resetting Styles **/
 
 // Variables: Page Colors
 $primary-color: #FFEFE7;
 $secundary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
-$quaternary-color: #E86424;
+$contrast-color: #FA9500;
 
 // Variables: Text Colors
 $text-main-color: #7C6A0A;
-$contrast-color: #FA9500;
+$text-contrast-color: #E86424;
 
 // Variables: Fonts
 $font-stack: "IBM Plex Sans", serif;
@@ -137,8 +137,9 @@ main {
 	}
 
 	.products {
-		display: grid;
-		grid-template: auto / repeat(3, 1fr);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
 		gap: 50px;
 	}
 
@@ -160,6 +161,7 @@ main {
 		button {
 			height: 6%;
 			align-self: flex-end;
+			cursor: pointer;
 
 			svg {
 				height: 100%;
@@ -191,21 +193,6 @@ main {
 				width: 100%;
 			}
 		}
-
-		// Alinear los elementos de la primera columna a la izquierda
-		&:nth-child(3n + 1) {
-			justify-self: start;
-		}
-
-		// Alinear los elementos de la segunda columna al centro
-		&:nth-child(3n + 2) {
-			justify-self: center;
-		}
-
-		// Alinear los elementos de la tercera columna a la derecha
-		&:nth-child(3n) {
-			justify-self: end;
-		}
 	}
 
 	.healthcare-catalog .product-card {
@@ -230,6 +217,43 @@ main {
 		}
 	}
 
+}
+
+.info-section {
+	h2 {
+		font-size: 3rem;
+		font-weight: 500;
+	}
+
+	.all-info-subsections {
+		margin-top: 60px;
+	}
+
+	.why-us-section {
+
+		.info-cards-container {
+			display: grid;
+			grid-template: 1fr / 1fr 1fr;
+
+			:nth-child(1) img {
+				margin-right: 30px;
+			}
+		}
+
+		.info-card {
+			display: flex;
+			align-items: center;
+			padding: 50px;
+			font-size: 1.8rem;
+			font-weight: 500;
+			text-align: center;
+			color: $text-contrast-color;
+
+			img {
+				height: 100px;
+			}
+		}
+	}
 }
 
 footer {

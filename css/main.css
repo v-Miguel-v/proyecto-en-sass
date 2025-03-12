@@ -74,6 +74,10 @@ main div.main-info button {
   background-color: #FA9500;
   cursor: pointer;
 }
+main div.main-info button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 main div.main-img {
   display: flex;
   justify-content: right;
@@ -115,7 +119,6 @@ main div.main-img img {
 }
 .all-products-section .product-card div {
   width: 100%;
-  padding: 0px 15px;
 }
 .all-products-section .product-card button {
   height: 6%;
@@ -127,6 +130,7 @@ main div.main-img img {
 }
 .all-products-section .product-card div.product-info {
   margin-top: 13px;
+  padding: 0px 15px;
 }
 .all-products-section .product-card div.product-info h3 {
   font-size: 1.6rem;
@@ -138,6 +142,7 @@ main div.main-img img {
 }
 .all-products-section .product-card div.product-img {
   height: 66%;
+  width: 150px;
   margin-top: 7px;
   overflow: hidden;
   align-self: center;
@@ -145,6 +150,10 @@ main div.main-img img {
 }
 .all-products-section .product-card div.product-img img {
   width: 100%;
+}
+.all-products-section .product-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .all-products-section .healthcare-catalog .product-card {
   color: #7C6A0A;
@@ -174,7 +183,7 @@ main div.main-img img {
   font-weight: 500;
 }
 .info-section .all-info-subsections {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .info-section .why-us-section .info-cards-container {
   display: grid;
@@ -194,6 +203,38 @@ main div.main-img img {
 }
 .info-section .why-us-section .info-card img {
   height: 100px;
+}
+.info-section .gallery-section .all-gallery-images-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+.info-section .gallery-section div.gallery-img {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.info-section .gallery-section div.gallery-img img {
+  width: 100%;
+}
+.info-section .gallery-section div.gallery-img:nth-child(1) img {
+  -o-object-position: 0 -30px;
+     object-position: 0 -30px;
+}
+.info-section .gallery-section div.gallery-img:nth-child(2) img {
+  -o-object-position: 0 -90px;
+     object-position: 0 -90px;
+}
+.info-section .gallery-section div.gallery-img:nth-child(3) img {
+  -o-object-position: 0 -50px;
+     object-position: 0 -50px;
+}
+.info-section .gallery-section div.gallery-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 footer {

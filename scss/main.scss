@@ -30,6 +30,10 @@ $font-stack: "IBM Plex Sans", serif;
 	}
 }
 
+@mixin page-margin {
+	padding: 0 30px;
+}
+
 // Resetting Styles
 * {
 	margin: 0;
@@ -43,9 +47,12 @@ html {
 }
 
 body {
-	padding: 0 30px;
 	color: $text-main-color;
 	background-color: $primary-color;
+}
+
+ul {
+	list-style: none;
 }
 
 button {
@@ -56,6 +63,7 @@ button {
 /** Page Styles **/
 
 nav {
+	@include page-margin();
 	width: 100%;
 	display: flex;
 	padding-top: 15px;
@@ -81,6 +89,7 @@ nav {
 }
 
 main {
+	@include page-margin();
 	width: 100%;
 
 	article {
@@ -113,7 +122,6 @@ main {
 			margin-top: 50px;
 			border-radius: 30px;
 			background-color: $contrast-color;
-			cursor: pointer;
 			@include bigger-on-hover();
 		}
 
@@ -131,6 +139,7 @@ main {
 }
 
 .all-products-section {
+	@include page-margin();
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -168,7 +177,6 @@ main {
 		button {
 			height: 6%;
 			align-self: flex-end;
-			cursor: pointer;
 
 			svg {
 				height: 100%;
@@ -231,6 +239,8 @@ main {
 }
 
 .info-section {
+	@include page-margin();
+
 	h2 {
 		font-size: 3rem;
 		font-weight: 500;
@@ -301,10 +311,76 @@ main {
 			@include bigger-on-hover();
 		}
 	}
+
+	.find-us-section {
+		margin-top: 100px;
+
+		div.map {
+			margin-top: 30px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		div.direction {
+			margin-top: 8px;
+			color: $text-contrast-color;
+
+			h3 {
+				font-size: 2.2rem;
+				font-weight: 400;
+			}
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }
 
 footer {
+	color: white;
 	width: 100%;
-	height: 250px;
+	min-height: 250px;
+	margin-top: 100px;
 	background-color: $contrast-color;
+	padding: 30px 40px 10px;
+	display: flex;
+	flex-direction: column;
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 500;
+		cursor: pointer;
+		width: fit-content;
+	}
+
+	ul.company-links {
+		margin-top: 20px;
+
+		li {
+			font-size: 1.2rem;
+			margin-bottom: 10px;
+			cursor: pointer;
+			width: fit-content;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	ul.social-links {
+		display: flex;
+		justify-content: center;
+		margin-top: auto;
+		margin-bottom: 12px;
+		gap: 25px;
+
+		img {
+			height: 35px;
+			cursor: pointer;
+		}
+	}
 }
